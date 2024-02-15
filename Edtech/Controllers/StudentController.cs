@@ -200,6 +200,10 @@ namespace Edtech.Controllers
                     image.ProfileImage.CopyTo(filestream);
                 }
             }
+            else
+            {
+                filename = "Empty_Content";
+            }
             return filename;
         }
 
@@ -209,7 +213,8 @@ namespace Edtech.Controllers
             if (video.ProfileVideo1 != null)
             {
                 string uploaddir = Path.Combine(_webHostEnvironment.WebRootPath, "video");
-                videofile1 = Guid.NewGuid().ToString() + "-" + video.ProfileVideo1.FileName;
+                //  videofile1 = Guid.NewGuid().ToString() + "-" + video.ProfileVideo1.FileName;
+                videofile1 = video.ProfileVideo1.FileName;
                 string filepath = Path.Combine(uploaddir, videofile1);
 
                 using (var filestream = new FileStream(filepath, FileMode.Create))
@@ -229,7 +234,8 @@ namespace Edtech.Controllers
             if (video.ProfileVideo2 != null)
             {
                 string uploaddir = Path.Combine(_webHostEnvironment.WebRootPath, "video");
-                videofile2 = Guid.NewGuid().ToString() + "-" + video.ProfileVideo2.FileName;
+                //videofile2 = Guid.NewGuid().ToString() + "-" + video.ProfileVideo2.FileName;
+                videofile2 = video.ProfileVideo2.FileName;
                 string filepath = Path.Combine(uploaddir, videofile2);
 
                 using (var filestream = new FileStream(filepath, FileMode.Create))
@@ -249,7 +255,8 @@ namespace Edtech.Controllers
             if (video.ProfileVideo3 != null)
             {
                 string uploaddir = Path.Combine(_webHostEnvironment.WebRootPath, "video");
-                videofile3 = Guid.NewGuid().ToString() + "-" + video.ProfileVideo3.FileName;
+                //videofile3 = Guid.NewGuid().ToString() + "-" + video.ProfileVideo3.FileName;
+                videofile3 = video.ProfileVideo3.FileName;
                 string filepath = Path.Combine(uploaddir, videofile3);
 
                 using (var filestream = new FileStream(filepath, FileMode.Create))
@@ -270,7 +277,8 @@ namespace Edtech.Controllers
             if (video.ProfileVideo4 != null)
             {
                 string uploaddir = Path.Combine(_webHostEnvironment.WebRootPath, "video");
-                videofile4 = Guid.NewGuid().ToString() + "-" + video.ProfileVideo4.FileName;
+                // videofile4 = Guid.NewGuid().ToString() + "-" + video.ProfileVideo4.FileName;
+                videofile4 = video.ProfileVideo4.FileName;
                 string filepath = Path.Combine(uploaddir, videofile4);
 
                 using (var filestream = new FileStream(filepath, FileMode.Create))
@@ -290,7 +298,8 @@ namespace Edtech.Controllers
             if (video.ProfileVideo5 != null)
             {
                 string uploaddir = Path.Combine(_webHostEnvironment.WebRootPath, "video");
-                videofile5 = Guid.NewGuid().ToString() + "-" + video.ProfileVideo5.FileName;
+                // videofile5 = Guid.NewGuid().ToString() + "-" + video.ProfileVideo5.FileName;
+                videofile5 = video.ProfileVideo5.FileName;
                 string filepath = Path.Combine(uploaddir, videofile5);
 
                 using (var filestream = new FileStream(filepath, FileMode.Create))
