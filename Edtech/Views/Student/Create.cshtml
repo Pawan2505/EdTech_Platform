@@ -37,11 +37,27 @@
                 <input asp-for="Price" class="form-control" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
-            <div class="form-group"> 
+
+            <div class="form-group">
                 <label asp-for="ProfileImage" class="control-label"></label>
                 <input asp-for="ProfileImage" class="form-control" />
                 <span asp-validation-for="ProfileImage" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label for="NumberOfVideos" class="control-label">Number of Videos</label>
+                <select id="NumberOfVideos" class="form-control">
+                    <option value="0">Select Number of Videos</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div id="videoUploadFields"></div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -54,5 +70,23 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#NumberOfVideos').change(function () {
+                var numVideos = parseInt($(this).val());
+                var videoUploadFields = $('#videoUploadFields');
+                videoUploadFields.empty();
+                for (var i = 1; i <= numVideos; i++) {
+                    videoUploadFields.append(
+                        '<div class="form-group">' +
+                        '<label for="ProfileVideo' + i + '" class="control-label">Profile Video ' + i + '</label>' +
+                        '<input type="file" name="ProfileVideo' + i + '" class="form-control" />' +
+                        '<input type="hidden" name="ProfileVideoPath' + i + '" value="default/path' + i + '" />' +
+                        '</div>'
+                    );
+                }
+            });
+        });
+    </script>
 }

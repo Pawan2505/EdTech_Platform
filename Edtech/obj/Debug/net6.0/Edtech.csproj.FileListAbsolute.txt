@@ -904,9 +904,9 @@ C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\
 C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\scopedcss\Views\Shared\_TeacherLayout.cshtml.rz.scp.css
 C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\scopedcss\bundle\Edtech.styles.css
 C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\scopedcss\projectbundle\Edtech.bundle.scp.css
-C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\Edtech.csproj.CopyComplete
 C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\Edtech.dll
 C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\refint\Edtech.dll
 C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\Edtech.pdb
 C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\Edtech.genruntimeconfig.cache
 C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\ref\Edtech.dll
+C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\Edtech.csproj.Up2Date

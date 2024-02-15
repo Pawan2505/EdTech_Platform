@@ -51,11 +51,11 @@
         </div>
     </div>
     <!-- Header End -->
-    <form method="post" action="@Url.Action("Enroll")">
-        <div class="row">
-            @foreach (var item in Model)
-            {
-                <div class="col-md-4 mb-4">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <form method="post" action="@Url.Action("Enroll")">
                     <div class="card">
                         <img src="~/img/@item.ProfileImage" width="400px" height="300px" asp-append-version="true">
                         <div class="card-body">
@@ -64,14 +64,26 @@
                             <p class="card-text"><strong>Description:</strong> @Html.DisplayFor(modelItem => item.Description)</p>
                             <p class="card-text"><strong>Duration:</strong> @Html.DisplayFor(modelItem => item.Duration)</p>
                             <p class="card-text"><strong>Price:</strong> @Html.DisplayFor(modelItem => item.Price)</p>
+                            
+
+                            <input type="hidden" name="CourseTitle" value="@item.CourseTitle" />
+                            <input type="hidden" name="InstructorName" value="@item.InstructorName" />
+                            <input type="hidden" name="Description" value="@item.Description" />
+                            <input type="hidden" name="Duration" value="@item.Duration" />
+                            <input type="hidden" name="Price" value="@item.Price" />
+                            <input type="hidden" name="ProfileVideo1" value="@item.ProfileVideo1" />
+                            <input type="hidden" name="ProfileVideo2" value="@item.ProfileVideo2" />
+                            <input type="hidden" name="ProfileVideo3" value="@item.ProfileVideo3" />
+                            <input type="hidden" name="ProfileVideo4" value="@item.ProfileVideo4" />
+                            <input type="hidden" name="ProfileVideo5" value="@item.ProfileVideo5" />
 
                             <button type="submit" class="btn btn-primary">Enroll Now</button>
                         </div>
                     </div>
-                </div>
-            }
-        </div>
-    </form>
+                </form>
+            </div>
+        }
+    </div>
 
 
     <!-- Back to Top -->

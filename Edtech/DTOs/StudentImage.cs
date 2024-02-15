@@ -9,5 +9,10 @@
         public string Duration { get; set; }
         public int Price { get; set; }
         public IFormFile ProfileImage { get; set; }
+        public IFormFile ProfileVideo1 { get; set; }
+        public IFormFile ProfileVideo2 { get; set; }
+        public IFormFile ProfileVideo3 { get; set; }
+        public IFormFile ProfileVideo4 { get; set; }
+        public IFormFile ProfileVideo5 { get; set; }
     }
 }
