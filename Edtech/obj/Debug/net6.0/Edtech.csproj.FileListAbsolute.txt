@@ -910,3 +910,4 @@ C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\
 C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\Edtech.genruntimeconfig.cache
 C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\ref\Edtech.dll
 C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\obj\Debug\net6.0\Edtech.csproj.Up2Date
+C:\Users\prati\OneDrive\Desktop\C-DAC\Net\Project Final\EdtechDotNet\Edtech\bin\Debug\net6.0\RazorPay Core.dll

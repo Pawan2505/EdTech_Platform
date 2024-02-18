@@ -11,5 +11,7 @@ namespace Edtech.Data
         }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Student2> Students2 { get; set; }
+        public DbSet<MerchantOrder> MerchantOrders { get; set; }
+
     }
 }
