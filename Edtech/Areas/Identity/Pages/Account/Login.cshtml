@@ -5,9 +5,26 @@
     ViewData["Title"] = "Login";
 }
 
+
+<style>
+    body {
+        background-image: url('https://t3.ftcdn.net/jpg/06/45/11/92/240_F_645119216_CCcAnlVSZjD3Eph01RMEBvVQ7ECVfpna.jpg');
+        background-size: 100% 70%;
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+    }
+
+    .login-container {
+        background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha value for transparency */
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 50px;
+    }
+</style>
+
 <div class="container mt-2">
     <div class="row">
-        <div class="col-md-4 mx-auto">
+        <div class="col-md-4 mx-auto login-container">
             <h1>@ViewData["Title"]</h1>
             <section>
                 <form id="account" method="post">

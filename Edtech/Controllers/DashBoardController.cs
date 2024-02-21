@@ -1,5 +1,4 @@
 ﻿using Edtech.Data;
-using Edtech.Migrations;
 using Edtech.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

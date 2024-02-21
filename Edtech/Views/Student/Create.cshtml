@@ -4,13 +4,22 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<br />
+<h2>Add Course</h2>
+<style>
+    .full-width-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-<h4>StudentImage</h4>
+</style>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
+<div class="container">
+    <!-- Add a container to center and provide margin -->
+
+        <form asp-action="Create" enctype="multipart/form-data" class="row mt-4">
+        <!-- Use the mt-4 class to add margin-top -->
+        <div class="col-md-6">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="CourseTitle" class="control-label"></label>
@@ -38,6 +47,9 @@
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
 
+        </div>
+        <div class="col-md-6">
+
             <div class="form-group">
                 <label asp-for="ProfileImage" class="control-label"></label>
                 <input asp-for="ProfileImage" class="form-control" />
@@ -58,19 +70,23 @@
 
             <div id="videoUploadFields"></div>
 
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+        </div>
+        <div class="form-group">
+            <br />
+            <input type="submit" value="Create" class="btn btn-primary full-width-btn" />
+        </div>
+        <div class="form-group">
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
     <script>
         $(document).ready(function () {
             $('#NumberOfVideos').change(function () {
@@ -86,6 +102,16 @@
                         '</div>'
                     );
                 }
+            });
+
+            // Validate the form
+            $('form').submit(function () {
+                if ($(this).valid()) {
+                    // If the form is valid, submit it
+                    return true;
+                }
+                // If the form is not valid, prevent submission
+                return false;
             });
         });
     </script>

@@ -2,10 +2,29 @@
 @{
     ViewData["Title"] = "Payment Page";
 }
+
+
+<style>
+    body {
+        background-image: url('https://t4.ftcdn.net/jpg/06/64/60/27/240_F_664602784_SzjCRMXIvKtYGhuXNaXdzMRiaVQU8VHh.jpg');
+        background-size: 100% 72%;
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+    }
+
+    .payment-container {
+        background-color: rgba(255, 255, 255, 0.6); /* Adjust the alpha value for transparency */
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 50px;
+    }
+</style>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <form class="well form-horizontal" asp-action="ProcessRequestOrder" method="post" id="contact_form">
-        <center><h2><b>Razorpay Payment Gateway Integration</b></h2></center>
+
+<form class="form-horizontal payment-container" asp-action="ProcessRequestOrder" method="post" id="contact_form">
+    <center><h2><b>Order Details</b></h2></center>
         <div class="form-group">
             <label class="col-md-4 control-label">Customer Name</label>
             <div class="col-md-4 inputGroupContainer">
@@ -46,7 +65,7 @@
         <label class="col-md-4 control-label">Course Name</label>
         <div class="col-md-4 inputGroupContainer">
             <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-inr" style="font-size:19px"></i></span>
+                <span class="input-group-addon"><i class="fa fa-address-book-o" style="font-size:11px"></i></span>
                 <input placeholder="Course Name" class="form-control" type="text" asp-for="CourseTitle" autocomplete="off" required>
             </div>
         </div>

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Edtech.Controllers
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
 
     public class AppRolesController : Controller
     {

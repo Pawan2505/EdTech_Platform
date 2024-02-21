@@ -12,8 +12,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - EdTech Application</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/site.css" asp-append-version="true" />
 
     <!-- Add your custom stylesheets here -->
     <style>
@@ -82,7 +82,84 @@
                 font-size: 14px;
             }
 
+
+
+            /********************/
+
+
+        .wrapper {
+            max-width: 75%;
+            margin: auto;
+        }
+
+            .wrapper > p,
+            .wrapper > h1 {
+                margin: 1.5rem 0;
+                text-align: center;
+            }
+
+            .wrapper > h1 {
+                letter-spacing: 3px;
+            }
+
+        .accordion {
+            background-color: white;
+            color: rgba(0, 0, 0, 0.8);
+            cursor: pointer;
+            font-size: 1.2rem;
+            width: 100%;
+            padding: 2rem 2.5rem;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+            .accordion i {
+                font-size: 1.6rem;
+            }
+
+            .active,
+            .accordion:hover {
+                background-color: #f1f7f5;
+            }
+
+        .pannel {
+            padding: 0 2rem 2.5rem 2rem;
+            background-color: white;
+            overflow: hidden;
+            background-color: #f1f7f5;
+            display: none;
+        }
+
+            .pannel p {
+                color: rgba(0, 0, 0, 0.7);
+                font-size: 1.2rem;
+                line-height: 1.4;
+            }
+
+        .faq {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            margin: 10px 0;
+        }
+
+            .faq.active {
+                border: none;
+            }
+
+
     </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <div class="container-fluid">
@@ -108,7 +185,7 @@
             <div class="col-md-4">
                 <!-- Sidebar Video List -->
                 <div class="sidebar" id="sidebarVideos">
-                    <h3>Other Videos</h3>
+                    <h3>Course Content</h3>
                     <!-- Additional Videos (if any) -->
                     <div class="sidebar-video" data-video-url="~/video/@Model.ProfileVideo1">
                         
@@ -169,6 +246,30 @@
         </div>
     </div>
 
+    @section Scripts {
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        this.parentElement.classList.toggle("active");
+
+                        var pannel = this.nextElementSibling;
+
+                        if (pannel.style.display === "block") {
+                            pannel.style.display = "none";
+                        } else {
+                            pannel.style.display = "block";
+                        }
+                    });
+                }
+            });
+        </script>
+    }
+
 
     <script>
         // Add event listener to the sidebarVideos element
@@ -193,7 +294,81 @@
                 <div class="card-body">
                     <!-- Place your other content here -->
                     <div class="other-content">
-                        <!-- Other content goes here -->
+                        <h1>Frequently Asked Questions</h1>
+
+                        <div class="faq">
+                            <button class="accordion">
+                                How can I access recorded lectures if I miss a live session?
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="pannel">
+                                <p>
+                                    Recorded lectures are available on the online learning platform. You can find them in the "Recordings" section.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq">
+                            <button class="accordion">
+                                What's the best way to reach out to my teacher for clarification on a topic?
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="pannel">
+                                <p>
+                                    You can use the course discussion forum or send an email to your teacher. Office hours are also available for one-on-one discussions.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq">
+                            <button class="accordion">
+                                Are presentation slides available before the lecture?
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="pannel">
+                                <p>
+                                    Yes, presentation slides are usually uploaded to the course website in advance. You can find them in the "Resources" or "Materials" section.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq">
+                            <button class="accordion">
+                                How do I submit my project, and what is the deadline?
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="pannel">
+                                <p>
+                                    Project submission details are provided in the project guidelines. Deadlines are typically mentioned in the course syllabus or announced during lectures.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq">
+                            <button class="accordion">
+                                When are doubt-clearing sessions held, and how can I join them?
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="pannel">
+                                <p>
+                                    Doubt classes are scheduled weekly. Check the course calendar for timings. Join through the provided link or platform mentioned by the instructor.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq">
+                            <button class="accordion">
+                                What topics will be covered in the upcoming test?
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="pannel">
+                                <p>
+                                    Test topics are outlined in the syllabus. Additionally, the instructor may provide a study guide or announce specific chapters or concepts to focus on.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                     </div>
                 </div>
             </div>

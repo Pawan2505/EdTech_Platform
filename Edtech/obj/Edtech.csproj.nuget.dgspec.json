@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\prati\\OneDrive\\Desktop\\C-DAC\\Net\\Project Final\\EdtechDotNet\\Edtech\\Edtech.csproj": {}
+    "G:\\Projects\\EdTech Application\\Final Project Dot Net\\EdTech_C-\\Edtech\\Edtech.csproj": {}
   },
   "projects": {
-    "C:\\Users\\prati\\OneDrive\\Desktop\\C-DAC\\Net\\Project Final\\EdtechDotNet\\Edtech\\Edtech.csproj": {
+    "G:\\Projects\\EdTech Application\\Final Project Dot Net\\EdTech_C-\\Edtech\\Edtech.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prati\\OneDrive\\Desktop\\C-DAC\\Net\\Project Final\\EdtechDotNet\\Edtech\\Edtech.csproj",
+        "projectUniqueName": "G:\\Projects\\EdTech Application\\Final Project Dot Net\\EdTech_C-\\Edtech\\Edtech.csproj",
         "projectName": "Edtech",
-        "projectPath": "C:\\Users\\prati\\OneDrive\\Desktop\\C-DAC\\Net\\Project Final\\EdtechDotNet\\Edtech\\Edtech.csproj",
-        "packagesPath": "C:\\Users\\prati\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prati\\OneDrive\\Desktop\\C-DAC\\Net\\Project Final\\EdtechDotNet\\Edtech\\obj\\",
+        "projectPath": "G:\\Projects\\EdTech Application\\Final Project Dot Net\\EdTech_C-\\Edtech\\Edtech.csproj",
+        "packagesPath": "C:\\Users\\Pawan Maurya\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\EdTech Application\\Final Project Dot Net\\EdTech_C-\\Edtech\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\prati\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pawan Maurya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -99,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
